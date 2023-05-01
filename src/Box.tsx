@@ -1,3 +1,5 @@
+import { BoxInterface } from "./BoxList"
+
 /** Colored box presentation
  *
  * Props:
@@ -10,11 +12,7 @@
  * BoxList -> Box
  */
 
-interface BoxPropsInterface {
-  id: string,
-  width?: number,
-  height?: number,
-  backgroundColor: string,
+interface BoxPropsInterface extends BoxInterface {
   remove: (id: string) => void
 }
 
