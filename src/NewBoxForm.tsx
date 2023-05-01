@@ -40,11 +40,11 @@ function NewBoxForm({ createBox }: {createBox: (newBox: BoxInterface ) => void})
   function handleSubmit(evt: React.FormEvent) {
     evt.preventDefault();
     console.log(formData);
-    const updateFormData = {...formData,
+    const updatedFormData = {...formData,
         width: formData.width ? Number(formData.width) : undefined,
         height: formData.height ? Number(formData.height) : undefined}
 
-    createBox({ ...updateFormData, id: uuid() });
+    createBox({ ...updatedFormData, id: uuid() });
     setFormData({ height: "", width: "", backgroundColor: "" });
   }
 
