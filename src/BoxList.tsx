@@ -10,8 +10,8 @@ import NewBoxForm from "./NewBoxForm";
 
 interface BoxInterface {
   id: string,
-  width: number,
-  height: number,
+  width?: number,
+  height?: number,
   backgroundColor: string
 }
 
