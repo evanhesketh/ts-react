@@ -8,11 +8,18 @@ import NewBoxForm from "./NewBoxForm";
  * - boxes: [ { id, width, height, backgroundColor }, ... ]
  */
 
+interface BoxInterface {
+  id: string,
+  width: number,
+  height: number,
+  backgroundColor: string
+}
+
 function BoxList() {
-  const [boxes, setBoxes] = useState([])
+  const [boxes, setBoxes] = useState<BoxInterface[]>([]);
 
   /** add box with given { id, width, height, backgroundColor } */
-  function add(newBox) {
+  function add(newBox: BoxInterface) {
     setBoxes(boxes => [...boxes, newBox]);
   }
 
@@ -39,3 +46,4 @@ function BoxList() {
 }
 
 export default BoxList;
+export type {BoxInterface};
